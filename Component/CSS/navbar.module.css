@@ -1,0 +1,53 @@
+.navHead{ 
+                font-size: auto; 
+               text-align: center;        
+}
+
+.eff {
+  transition: 0.4s ease;
+  background: #ffffff;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 0px 0;
+  margin: 0 20px;
+}
+.eff:hover {
+  border-top: 4px solid #2b2b2b;
+  border-bottom: 4px solid #2b2b2b;
+  padding: 6px 2; 
+}
+.linkColor {
+               color: black
+}
+
+.getTouch {
+  background-color:#000000
+}
+
+.getCol {
+  color: #ffffff
+}
+
+
+
+
+
+ 
+
+.navImg {
+               text-align: left;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+               .navHead{
+                              font-size : 12px;
+               }
+}

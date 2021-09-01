@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Paytone+One&display=swap');
+
+
+.imagePosition
+{
+
+
+               text-align:center
+}
+
+.info {
+               font-family: "Fira Sans";
+               color: white
+} 
+
+.p {
+               font-family: "Fira Sans";
+               color: white
+}
+
+.container {
+               background-color: #000000;
+               padding:2%
+}
+.info2 { 
+               text-align:left;
+
+}
