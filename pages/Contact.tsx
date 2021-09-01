@@ -37,8 +37,15 @@ export default function Contact() {
                
                <p> General Message</p>
  <input type="text" className={classes.input} ></input>
-               
+
+        <Grid md={12} xs={12} className={classes.subMain}>
+      <button className={classes.buttonTwo}><span>Send</span></button>
+    </Grid>
 </form>
+
+      
+
+
 </Grid>
 
 </Grid>
@@ -58,7 +65,8 @@ I am a Front-end Developer with 12 years commercial experience, author of CSS3 F
                                              </Grid>
                                              <Grid item md={1}></Grid>
                               </Grid>
-
+                                     
+                                     
 
 
 

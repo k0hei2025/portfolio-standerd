@@ -45,3 +45,54 @@
   .form {
                  margin-left: 20%;
   }
+
+
+  .buttonTwo {
+  border-radius: 4px;
+  background-color:#ffffff;
+  font-family: "Fira Sans";
+  border: none;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.subMain{
+  width: 25%;
+  margin:22px;
+
+}
+
+.buttonTwo{
+  text-align: center;
+  cursor: pointer;
+  font-size:20px;
+  margin: 0 0 0 100px;
+}
+
+
+.buttonTwo span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonTwo span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonTwo:hover span {
+  padding-right: 25px;
+}
+
+.buttonTwo:hover span:after {
+  opacity: 1;
+  right: 0;
+}
