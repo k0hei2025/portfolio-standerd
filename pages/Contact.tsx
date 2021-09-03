@@ -12,7 +12,7 @@ export default function Contact() {
                return (
                               <>
                               <Navbar/>
-                              <Grid container >
+                              <Grid container style={{marginBottom:'5%'}} >
                                              <Grid item md={1}></Grid>
                                              <Grid item md={5} xs={12}>
                                            
@@ -20,7 +20,7 @@ export default function Contact() {
 
                                            <p className={classes.description}>Send a general message or details of a project you like me to be a part of and I will get back to you as soon as possible.</p>
 
-                                           <Grid container>
+                              <Grid container>
 
 <Grid item md={1}></Grid>
 
@@ -38,9 +38,9 @@ export default function Contact() {
                <p> General Message</p>
  <input type="text" className={classes.input} ></input>
 
-        <Grid md={12} xs={12} className={classes.subMain}>
-      <button className={classes.buttonTwo}><span>Send</span></button>
-    </Grid>
+  <button className={classes.buttonTwo}><span>Send</span></button>
+        
+
 </form>
 
       
@@ -48,24 +48,69 @@ export default function Contact() {
 
 </Grid>
 
+
+
+
 </Grid>
 
 
                                              </Grid>
+                              
                                              <Grid md={1} ></Grid>
+
+
                                              <Grid item md={1} xs={6}>
                              <h2>About Me </h2>
 <Image src={myImage} width={100} height={120} />
+  
+
+<Grid item md={2} xs={6} className={classes.about}>
+
+  <p>Email  vaibhavvermaonline@gmail.com</p>
+
+  <p>Tel +918223914227</p>
+
+  
+</Grid>
 
 
-                                             </Grid>
+
+  </Grid>
+
+
+
+
+
                                              <Grid item md={2} xs={6} style={{textAlign: 'left' , marginTop: '4%'}}>
                                                     <p className={classes.about}>
 I am a Front-end Developer with 12 years commercial experience, author of CSS3 Foundations, and graduate of Internet Technology. I create successful websites that are</p>          
+
+
+
+
+                                              
+
+
+
                                              </Grid>
-                                             <Grid item md={1}></Grid>
+
+
+
+    
+
+
+                                             <Grid item md={1}>
+
+                                    
+                                           
+                                         
+                                             </Grid>
+
+
+
+
                               </Grid>
-                                     
+                                 
                                      
 
 

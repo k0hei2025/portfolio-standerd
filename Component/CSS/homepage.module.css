@@ -18,6 +18,21 @@
                font-family: "Fira Sans";
                font-weight: bolder;
 }
+
+.testinomialsDescription {
+               text-align: center;
+               font-family: "Fira Sans";
+               background-color: royalblue
+}
+
+
+.testimonialsDescriptionTitle {
+               text-align: center;
+               font-family: "Fira Sans";
+             
+}
+
+
 .cardHeading {
                text-align: center;
                font-weight: bolder;

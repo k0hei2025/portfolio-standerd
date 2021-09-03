@@ -32,6 +32,10 @@
      font-family: "Fira Sans";
   }
   
+  .no{
+    font-family: "Fira Sans";
+  }
+
   .input[type=text]:focus{
     border-color:dodgerBlue;
     box-shadow:0 0 8px 0 dodgerBlue;
@@ -40,10 +44,13 @@
                  color : #ffffff;
                  background-color:#000000;
                  border-radius: 7px;
-    font-family: "Fira Sans";            
+    font-family: "Fira Sans";    
+              
   }
   .form {
                  margin-left: 20%;
+                 padding: 5%;
+               
   }
 
 

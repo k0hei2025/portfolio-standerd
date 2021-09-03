@@ -1,9 +1,11 @@
 import React, { useState , useEffect } from 'react'
 import { FC } from 'react'
-import {Grid, Link, } from '@material-ui/core'
+import {Grid } from '@material-ui/core'
 import IconImg from '../image/v-icon-22.jpg'
 import Image from 'next/image'
 import classNames from 'classnames'
+import Link from 'next/link'
+
 
 import classes from './CSS/navbar.module.css'
 import burgerClass from './CSS/hamburger.module.css'
@@ -39,10 +41,10 @@ useEffect(() =>{
     
   
     <ul className={burgerClass.menu} >
-      <Link href="#"><li>Home</li></Link>
-      <Link href="#"><li>About</li></Link>
-      <Link href="#"><li>Info</li></Link>
-      <Link href="#"><li>Contact</li></Link>
+      <Link href="/" passHref><li>Home</li></Link>
+      <Link href="/aboutMe" passHref><li>About</li></Link>
+      <Link href="/projects" passHref><li>Projects</li></Link>
+      <Link href="/testimonials" passHref><li>Testimonials</li></Link>
   
     </ul>
   </div>
@@ -61,20 +63,20 @@ if (window.innerWidth >= 900){
                     {val : 
                         <>
                     <Grid item md={1} xs={2} className={buttonClass} >
-         <Link href='/'> <p  className={classes.linkColor}>  Home </p></Link>
+         <Link href="/" passHref><p className={classes.linkColor}>Home</p></Link>
 </Grid>
 
 <Grid item md={1} xs={2} className={buttonClass} >
-         <Link href='/'> <p className={classes.linkColor}>  Portfolio </p> </Link>
+         <Link href="/projects" passHref><p className={classes.linkColor}>Portfolio</p></Link>
 </Grid>
 <Grid item md={1} xs={2} className={buttonClass} >
-         <Link href='/'>  <p className={classes.linkColor}>Testimonials</p></Link>
+         <Link href="/testimonials" passHref><p className={classes.linkColor}>Testimonials</p></Link>
 </Grid>
 <Grid  item md={1} xs={2}  className={buttonClass}>
-         <Link href='/'>  <p className={classes.linkColor}>  About </p></Link>
+         <Link href="/aboutMe" passHref><p className={classes.linkColor}>About</p></Link>
 </Grid>
 <Grid item md={1} xs={2} className={ classNames(buttonClass , classes.get , classes.getTouch)} >
-         <Link href='/'> <p className={classNames( classes.linkColor , classes.getCol )}>  Get in Touch</p></Link>
+         <Link href="/Contact" passHref><p className={classNames( classes.linkColor , classes.getCol )}>Get in Touch</p></Link>
 </Grid>
 </>
 }
