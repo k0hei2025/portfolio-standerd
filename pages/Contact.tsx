@@ -1,14 +1,41 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
 import { Grid } from '@material-ui/core'
 import Image from 'next/image'
+import  emailJs from 'emailjs-com'
 
 import classes from '../styles/contact.module.css'
 import myImage from '../image/WhatsApp Image 2021-01-15 at 12.58.23 AM.jpg'
 import { textAlign } from '@material-ui/system'
 
 export default function Contact() {
+
+  const [err , setErr] = useState(false);
+  const [form , setForm]  = useState(false);
+  const nameRef =    useRef <HTMLInputElement> (null);
+  const emailRef =   useRef <HTMLInputElement> (null);
+  const messageRef = useRef <HTMLInputElement> (null);
+
+ const submitHandler = async(e : any) => {
+       e.preventDefault()
+
+       if (nameRef==='' && emailRef==='' ){
+          setErr(true)
+       }
+
+
+     const data = await emailJs.sendForm('service_wjlk3cj' , 'template_f2tn10s' , e.target , 'user_IUMCNnwwltTydfJ2ttBAv');
+     console.log(data)
+     const resData  = await data;
+     console.log(resData);
+
+     setForm(true)
+
+ }
+
+
+
                return (
                               <>
                               <Navbar/>
@@ -26,19 +53,24 @@ export default function Contact() {
 
 <Grid className={classes.formContainer} item md={12} xs={12}>
                
-               <form className={classes.form} >
+
+          {err ? <h2 style={{color:"red"}}>Invalid Parameters Make sure you fill form Correctly</h2> : <p></p> }
+
+           {form ? <h2 style={{color:"green"}}> Email sent Successfully </h2> : <p></p> }
+
+               <form className={classes.form}  onSubmit={submitHandler}>
                <h2> About You</h2>
 
  <p> Your Name</p>
- <input type="text" className={classes.input} ></input>
+ <input name='username' type="text" className={classes.input} ref={nameRef} ></input>
                
                <p> Email</p>
- <input type="text" className={classes.input} ></input>
+ <input name='email' type="text" className={classes.input} ref={emailRef} ></input>
                
                <p> General Message</p>
- <input type="text" className={classes.input} ></input>
+ <input name='message' type="text" className={classes.input} ref={messageRef} ></input>
 
-  <button className={classes.buttonTwo}><span>Send</span></button>
+  <input type='submit' className={classes.buttonTwo} />  
         
 
 </form>
