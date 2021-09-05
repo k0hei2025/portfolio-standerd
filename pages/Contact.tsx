@@ -1,23 +1,28 @@
 import React, { useRef, useState } from 'react'
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
-import { Grid } from '@material-ui/core'
+import { Grid, LinearProgress } from '@material-ui/core'
 import Image from 'next/image'
 import  emailJs from 'emailjs-com'
+import EmailIcon from '@material-ui/icons/Email';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 import classes from '../styles/contact.module.css'
 import myImage from '../image/WhatsApp Image 2021-01-15 at 12.58.23 AM.jpg'
+import LinnerBuffer from '../Component/spinner'
 import { textAlign } from '@material-ui/system'
 
 export default function Contact() {
 
   const [err , setErr] = useState(false);
   const [form , setForm]  = useState(false);
+  const [loading , setLoading] = useState(false);
   const nameRef =    useRef <HTMLInputElement> (null);
   const emailRef =   useRef <HTMLInputElement> (null);
   const messageRef = useRef <HTMLInputElement> (null);
 
  const submitHandler = async(e : any) => {
+         setLoading(true);
        e.preventDefault()
 
        console.log(nameRef.current.value)
@@ -30,6 +35,8 @@ export default function Contact() {
      const resData  = await data;
      console.log(resData);
 
+      setLoading(false)
+      setErr(false);
      setForm(true)
 
 
@@ -38,6 +45,8 @@ export default function Contact() {
 
        else {
                  setErr(true)
+                 setForm(false)
+                 setLoading(false)
 
        }
 
@@ -46,7 +55,7 @@ export default function Contact() {
 
 
                return (
-                              <>
+                              <Grid container style={{marginRight:"5px"}}>
                               <Navbar/>
                               <Grid container style={{marginBottom:'5%'}} >
                                              <Grid item md={1}></Grid>
@@ -54,7 +63,7 @@ export default function Contact() {
                                            
                                            <h1 className={classes.heading}> Get in Touch</h1>
 
-                                           <p className={classes.description}>Send a general message or details of a project you like me to be a part of and I will get back to you as soon as possible.</p>
+                                           <p className={classes.description}>Send a general message  I reply to you as soon as possible.</p>
 
                               <Grid container>
 
@@ -63,9 +72,10 @@ export default function Contact() {
 <Grid className={classes.formContainer} item md={12} xs={12}>
                
                   
-          {err ? <h2 className={classes.popup} style={{color:"red"}}>Invalid Parameters Make sure you fill form Correctly</h2> : <p></p> }
+          {err ? <h2 className={classes.popup} style={{color:"#FF0000"}}>Invalid Parameters Make sure you fill form Correctly</h2> : <p></p> }
 
            {form ? <h2 className={classes.popup} style={{color:"green"}}> Email sent Successfully </h2> : <p></p> }
+             {loading ? <LinnerBuffer /> : <p></p> }  
 
                <form className={classes.form}  onSubmit={submitHandler}>
                <h2> About You</h2>
@@ -107,9 +117,9 @@ export default function Contact() {
 
 <Grid item md={2} xs={6} className={classes.about}>
 
-  <p>Email  vaibhavvermaonline@gmail.com</p>
+  <p> <EmailIcon />    vaibhavvermaonline@gmail.com</p>
 
-  <p>Tel +918223914227</p>
+  <p> <PhoneIcon />+918223914227</p>
 
   
 </Grid>
@@ -124,7 +134,7 @@ export default function Contact() {
 
                                              <Grid item md={2} xs={6} style={{textAlign: 'left' , marginTop: '4%'}}>
                                                     <p className={classes.about}>
-I am a Front-end Developer with 12 years commercial experience, author of CSS3 Foundations, and graduate of Internet Technology. I create successful websites that are</p>          
+I am a Front-end Developer with 3 years  experience, Trilingual, Undergraduate Student. I create successful websites that are Fast More Secure Well Designed.</p>          
 
 
 
@@ -158,7 +168,7 @@ I am a Front-end Developer with 12 years commercial experience, author of CSS3 F
 
 
                               <Footer/>
-                              </>
+                              </Grid>
                )
 
 }

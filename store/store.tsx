@@ -1,7 +1,9 @@
 import {createSlice , configureStore} from "@reduxjs/toolkit"
 
 const initialState = {
-               mobState : false
+               mobState : false,
+               progress : 0,
+               buffer : 10
 }
 
 const majorStoreSlice = createSlice({
@@ -12,7 +14,13 @@ const majorStoreSlice = createSlice({
                                              if (window.innerWidth <=900){
                                                             state.mobState = true;
                                              }
+                              },
+
+                              setSpinnerTools(state : any , action : any){
+                                    state.progress = action.payload.progress1,
+                                    state.buffer = action.payload.buffer1             
                               }
+
                },
 
 

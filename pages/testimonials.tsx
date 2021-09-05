@@ -19,7 +19,7 @@ export default function Testimonials() {
                                         </Grid>
                                         <Grid item md={2}></Grid>
                                         <Grid item md={8}>
-                                    <p className={classes.size1}> I have 12 years commercial experience helping start-ups, small businesses, and agencies create successful websites.</p>  
+                                    <p className={classes.size1}> I have 3 years  experience helping start-ups, small businesses, and agencies create successful websites.</p>  
                                     </Grid>
                                     <Grid item md={2}></Grid>
 
@@ -34,7 +34,7 @@ export default function Testimonials() {
                                          <Grid item md={2}></Grid>
                               </Grid>
                                         
-<Grid md={12}>
+<Grid md={12} xs={12}>
 <Button />
 </Grid>
                                      <Footer />  

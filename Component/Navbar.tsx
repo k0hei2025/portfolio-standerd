@@ -67,7 +67,7 @@ if (window.innerWidth >= 900){
 </Grid>
 
 <Grid item md={1} xs={2} className={buttonClass} >
-         <Link href="/projects" passHref><p className={classes.linkColor}>Portfolio</p></Link>
+         <Link href="/projects" passHref><p className={classes.linkColor}>Projects</p></Link>
 </Grid>
 <Grid item md={1} xs={2} className={buttonClass} >
          <Link href="/testimonials" passHref><p className={classes.linkColor}>Testimonials</p></Link>
