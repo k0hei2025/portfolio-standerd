@@ -40,6 +40,42 @@
     border-color:dodgerBlue;
     box-shadow:0 0 8px 0 dodgerBlue;
   }
+
+
+  .area{
+    background-color:transparent;
+       padding-right:33%;
+    box-sizing:border-box;
+        transition:.3s;
+        color: #fff;
+        font-family: "Fira Sans";
+
+         border:0px solid #aaa;
+    border-bottom: 2px solid #aaa;
+  }
+
+  .area[type=textarea]{
+    width:70%;
+   
+    border-bottom: 2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    background-color : transparent;
+    color: #fff;
+     font-family: "Fira Sans";
+  }
+
+
+
+   .area[type=textarea]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+
   .formContainer {
                  color : #ffffff;
                  background-color:#000000;
@@ -102,4 +138,9 @@
 .buttonTwo:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.popup {
+  text-align: left;
+  margin-left: 14%;
 }

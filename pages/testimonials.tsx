@@ -10,7 +10,7 @@ import {img} from '../image/company'
 
 export default function Testimonials() {
                return (
-                              <>
+                              <Grid container className={classes.bx}>
                               <Navbar />
                               <Grid container>
                          <Grid  item md={12} xs={12}>
@@ -28,7 +28,7 @@ export default function Testimonials() {
 
                                    <Grid item md={2}></Grid>
                                     <Grid item md={6} xs={12} className={classes.testinomialsDescription}>
-                                           <p>feedback</p>
+                                           <p className={classes.aboutDescription}>I have worked with many bright, young professionals, but Vaibhav verma's talent and problem-solving skills stand out among his peers. I remain impressed with his driven work ethic and ability to work creatively under pressure at Sttabot Technology. He has done his task but some of the task were outside of Vaibhav’s normal role, but he accepted the responsibility without hesitation. Within the week, I'm grateful for Him & his team’s hard work in meeting the deadline under the circumstances.</p>
                                     </Grid>
                                     <Grid item md={2} xs={12} className={classes.testimonialsDescriptionTitle}> <Image src={img} height="100" width="300" /></Grid>
                                          <Grid item md={2}></Grid>
@@ -38,6 +38,6 @@ export default function Testimonials() {
 <Button />
 </Grid>
                                      <Footer />  
-                              </>
+                              </Grid>
                )
 }

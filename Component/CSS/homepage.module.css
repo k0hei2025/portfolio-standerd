@@ -22,8 +22,9 @@
 .testinomialsDescription {
                text-align: center;
                font-family: "Fira Sans";
-               background-color: royalblue
+            
 }
+
 
 
 .testimonialsDescriptionTitle {
@@ -49,13 +50,29 @@
 
 .projectWork  {
                text-align: center;
+            
 
-
+}
+.projectSize {
+               font-size:22px;
+               text-align: center;
+}
+.boxs{
+               margin-bottom : 15%;
+}
+.prot{
+               text-align: center;
 }
 
 
+.aboutDescription {
+               text-align: left;
+               font-family : "Fira Sans";
+}
  
-
+.bx {
+               margin-bottom:20px
+}
 
 
 
@@ -77,6 +94,15 @@
                }
                .cardDescription {
                                font-size: 8px;
+               }
+               .aboutDescription{
+                              font-size:15px;
+                              font-weight: 700;
+                              margin-left: 3%;
+               }
+               .projectWork{
+                              font-size:10px;
+                              text-align: center;
                }
 }
 

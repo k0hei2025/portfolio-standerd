@@ -63,7 +63,7 @@ if (window.innerWidth >= 900){
                     {val : 
                         <>
                     <Grid item md={1} xs={2} className={buttonClass} >
-         <Link href="/" passHref><p className={classes.linkColor}>Home</p></Link>
+         <Link  href="/" passHref><p className={classes.linkColor}>Home</p></Link>
 </Grid>
 
 <Grid item md={1} xs={2} className={buttonClass} >
@@ -105,7 +105,7 @@ if (window.innerWidth >= 900){
                        <Grid container   >
 
 <Grid md={6} xs={2} className={classes.navImg}>
-             <Image src={IconImg}  width={50} height={50}/>
+           <Link href='/'><Image src={IconImg}  width={50} height={50}/></Link>
 </Grid>
 
  

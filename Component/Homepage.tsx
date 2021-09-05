@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@material-ui/core'
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from './CSS/homepage.module.css'
 import Image from 'next/image'
 
@@ -7,8 +7,29 @@ import AndroidImg from '../image/feature__web.webp';
 import Tools from '../image/feature__tools.webp'
 import Lock from '../image/images.png'
 import Button from '../UX/button'
+import {useSelector , useDispatch} from 'react-redux'
+import {RootState , actionStore}  from '../store/store'
+
 
 export default function Homepage() {
+
+     
+
+    const check = useSelector((state : RootState)=>state.mobState);
+    const dispatch = useDispatch();
+          console.log(check)
+
+
+         
+          useEffect(() =>{
+            
+             dispatch(actionStore.setMobileState())
+
+          },[])
+
+
+          
+
                return (
                             <>
                             <Grid  container > 
@@ -73,23 +94,21 @@ export default function Homepage() {
 
   </Grid>
                            
-                           <Grid className={classes.projectWork}    md={3} xs={3}>
-                               
-                               Site Name
-                               
-                               Site Description
+                             {/* <Grid  item md={3} xs={12}>
 
-                           </Grid>
-                           <Grid className={classes.projectWork}   md={5} xs={5}>
-                               
-                               Website of Image
+                       <h1>Stream</h1>
+     
 
-                           </Grid>
-                            <Grid   className={classes.projectWork}  md={4} xs={4}>
-                                
-                                Androoid Site Image
+                     </Grid>
+                     {mobState ? <p></p> :    <Grid  item md={5} xs={12}>                      
+                              <Image src={StreamWeb} height={500} width={700} />
+                     </Grid>}
+                  
 
-                            </Grid>
+                     <Grid  item md={4} xs={12} >
+                                            <Image src={StreamMob} height={500} width={300} />
+                     </Grid> */}
+
 
 
                             <Grid className={classes.projectWork} md={12} xs={12}>

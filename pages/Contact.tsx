@@ -20,17 +20,26 @@ export default function Contact() {
  const submitHandler = async(e : any) => {
        e.preventDefault()
 
-       if (nameRef==='' && emailRef==='' ){
-          setErr(true)
-       }
+       console.log(nameRef.current.value)
 
+       if ( nameRef.current.value !=='' && emailRef.current.value!=='' ){
 
+        
      const data = await emailJs.sendForm('service_wjlk3cj' , 'template_f2tn10s' , e.target , 'user_IUMCNnwwltTydfJ2ttBAv');
      console.log(data)
      const resData  = await data;
      console.log(resData);
 
      setForm(true)
+
+
+
+       }
+
+       else {
+                 setErr(true)
+
+       }
 
  }
 
@@ -53,10 +62,10 @@ export default function Contact() {
 
 <Grid className={classes.formContainer} item md={12} xs={12}>
                
+                  
+          {err ? <h2 className={classes.popup} style={{color:"red"}}>Invalid Parameters Make sure you fill form Correctly</h2> : <p></p> }
 
-          {err ? <h2 style={{color:"red"}}>Invalid Parameters Make sure you fill form Correctly</h2> : <p></p> }
-
-           {form ? <h2 style={{color:"green"}}> Email sent Successfully </h2> : <p></p> }
+           {form ? <h2 className={classes.popup} style={{color:"green"}}> Email sent Successfully </h2> : <p></p> }
 
                <form className={classes.form}  onSubmit={submitHandler}>
                <h2> About You</h2>
@@ -68,9 +77,9 @@ export default function Contact() {
  <input name='email' type="text" className={classes.input} ref={emailRef} ></input>
                
                <p> General Message</p>
- <input name='message' type="text" className={classes.input} ref={messageRef} ></input>
+ <textarea name='message' className={classes.area} type="textarea" rows="4" col="50"  ref={messageRef} ></textarea>
 
-  <input type='submit' className={classes.buttonTwo} />  
+  <button type='submit' className={classes.buttonTwo} > <span> Send </span> </button>  
         
 
 </form>
