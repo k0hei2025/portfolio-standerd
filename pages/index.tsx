@@ -6,10 +6,12 @@ import Navbar  from '../Component/Navbar'
 import React, { Fragment } from 'react'
 import Homepage from '../Component/Homepage'
 import Footer from '../Component/Footer'
+import { Grid } from '@material-ui/core'
 
 const Home: NextPage = () => {
   return (
-    <Fragment>
+    
+      <Grid style={{overflowX: 'hidden'}} container spacing={2}>
        <Navbar />
      <Homepage />
      <Footer/>
@@ -18,7 +20,7 @@ const Home: NextPage = () => {
        <h1> Start Portfolio </h1>
 
     </div> */}
-    </Fragment>
+    </Grid>
   )
 }
 

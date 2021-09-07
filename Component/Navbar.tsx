@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 import classes from './CSS/navbar.module.css'
 import burgerClass from './CSS/hamburger.module.css'
-import button from '../UX/button'
+import Button from '../UX/button'
 
 export default function  Navbar() {
                 
@@ -28,7 +28,12 @@ useEffect(() =>{
 
         setHamburgerDesignState({
                 val : 
-                <div className={classes.body}>
+                  <>
+                <Grid md={6} xs={2} className={classes.navImg}>
+           <Link href='/'><Image src={IconImg}  width={50} height={50}/></Link>
+</Grid>          
+<Grid item md={6} xs={6} ></Grid>
+                <Grid md={6} xs={1} className={classes.body}>
                 <nav role="navigation">
   <div className={burgerClass.menuToggle} >
   
@@ -45,12 +50,12 @@ useEffect(() =>{
       <Link href="/aboutMe" passHref><li>About</li></Link>
       <Link href="/projects" passHref><li>Projects</li></Link>
       <Link href="/testimonials" passHref><li>Testimonials</li></Link>
-  
+      <Link href="/Contact" passHref><li><Button/></li></Link>
     </ul>
   </div>
 </nav>
-</div>
-        
+</Grid>
+      </>  
         })
 }
 
@@ -62,6 +67,12 @@ if (window.innerWidth >= 900){
             setWebDesignState (
                     {val : 
                         <>
+    
+
+  <Grid md={6} xs={2} className={classes.navImg}>
+           <Link href='/'><Image src={IconImg}  width={50} height={50}/></Link>
+</Grid>          
+                        
                     <Grid item md={1} xs={2} className={buttonClass} >
          <Link  href="/" passHref><p className={classes.linkColor}>Home</p></Link>
 </Grid>
@@ -78,6 +89,9 @@ if (window.innerWidth >= 900){
 <Grid item md={1} xs={2} className={ classNames(buttonClass , classes.get , classes.getTouch)} >
          <Link href="/Contact" passHref><p className={classNames( classes.linkColor , classes.getCol )}>Get in Touch</p></Link>
 </Grid>
+
+
+
 </>
 }
             );
@@ -102,11 +116,9 @@ if (window.innerWidth >= 900){
     
 
                return(
-                       <Grid container   >
+                       <Grid container  style={{marginTop:'1%' , marginLeft:'2%'}}  >
 
-<Grid md={6} xs={2} className={classes.navImg}>
-           <Link href='/'><Image src={IconImg}  width={50} height={50}/></Link>
-</Grid>
+
 
  
  {hamburger ? hamburgerDesignState.val : webDesignState.val}

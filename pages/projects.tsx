@@ -38,30 +38,30 @@ export default function Pprojects() {
                return (
                               <>
                               <Navbar />
-                                              <h1 className={classes.size}>Projects page</h1>       
+                                              <h1 className={classes.size}>Projects </h1>       
 
 
 <Grid className={classes.projectWork} container spacing={2}>
                      
-                     <Grid   item md={3} xs={12}>
+                     <Grid  item md={3} xs={12}>
 
                        <h1>Stream</h1>
       
-                    <p className={classes.aboutDescription} > I create that Application within a 15 days It't really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way  </p>
+                    <p  className={classes.aboutDescription} > I create that Application within a 15 days It't really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way  </p>
 
                     <h2 className={classes.aboutDescription}>
                       Languages  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> </p>
+                     <p className={classes.icons} >   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> </p>
                        <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
                     </h2>
-                    <p style={{textAlign: 'left' , fontSize : '25px'}}> <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
+                    <p className={classes.icons}> <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
                     
                       <h2 className={classes.aboutDescription}>
                       Database  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>  <SiFirebase/>  </p>
+                     <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
                      </Grid>
@@ -87,16 +87,16 @@ export default function Pprojects() {
                         <h2 className={classes.aboutDescription}>
                       Languages  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>   <SiJavascript />    <FaCss3Alt/>   <SiNextDotJs/> </p>
+                     <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/>   <SiNextDotJs/> </p>
                        <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
                     </h2>
-                    <p style={{textAlign: 'left' , fontSize : '25px'}}>  <AiFillGithub/>  <FaFigma />  </p>
+                    <p className={classes.icons}>  <AiFillGithub/>  <FaFigma />  </p>
                     
                       <h2 className={classes.aboutDescription}>
                       Database  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>  <SiFirebase/>  </p>
+                     <p className={classes.icons}>  <SiFirebase/>  </p>
 
      
 
@@ -120,21 +120,21 @@ export default function Pprojects() {
 
                        <h1>Stream-New</h1>
 
-                       <p className={classes.aboutDescription}> This is the Renew  application of previous stream not only that </p>
+                       <p className={classes.aboutDescription}> This is the Renew  application of previous stream not only that we can improve the latency problem the new additional things which i add in this application is improve the independent authenticated data with the help of this unauthenticated users cant see any data and event cant see there video screen and not able to perform any operation if the authenticated user give access to unwanted user then they can only open there audio only  </p>
      
       <h2 className={classes.aboutDescription}>
                       Languages  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
+                     <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
                        <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
                     </h2>
-                    <p style={{textAlign: 'left' , fontSize : '25px'}}> <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
+                    <p className={classes.icons}> <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
                     
                       <h2 className={classes.aboutDescription}>
                       Database  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>  <SiFirebase/>  </p>
+                     <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
 
@@ -158,19 +158,22 @@ export default function Pprojects() {
 
                       <h1>Microsoft Campuss Club (SVVV)</h1>
 
+                        <p className={classes.aboutDescription}> This is my club application which I work as front-end developer  </p>
+
+
                         <h2 className={classes.aboutDescription}>
                       Languages  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
+                     <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
                        <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
                     </h2>
-                    <p style={{textAlign: 'left' , fontSize : '25px'}}> <FaDocker/> <AiFillGithub/>   <FaTrello/>  <FaFigma /> </p>
+                    <p className={classes.icons}> <FaDocker/> <AiFillGithub/>   <FaTrello/>  <FaFigma /> </p>
                     
                       <h2 className={classes.aboutDescription}>
                       Database  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>  <SiFirebase/>  </p>
+                     <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
      
@@ -193,19 +196,22 @@ export default function Pprojects() {
 
                        <h1>AnimeBlog</h1>
      
+                            <p className={classes.aboutDescription}> This application is based on the peoples who like and want to see Animes so that the peoples post there anime which they already watched and want to share to other peoples and recommand to other peoples and
+                             You can also see all anime by activating music buttons and enjoy this application 
+                              </p>
                              <h2 className={classes.aboutDescription}>
                       Languages  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
+                     <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
                        <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
                     </h2>
-                    <p style={{textAlign: 'left' , fontSize : '25px'}}>  <AiFillGithub/>   <FaTrello/>  <FaFigma /> </p>
+                    <p className={classes.icons}>  <AiFillGithub/>   <FaTrello/>  <FaFigma /> </p>
                     
                       <h2 className={classes.aboutDescription}>
                       Database  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>  <SiFirebase/>  </p>
+                     <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
                      </Grid>
@@ -228,21 +234,23 @@ export default function Pprojects() {
                      <Grid  item md={3} xs={12}>
 
                        <h1>Event-Loop </h1>
+                       
+                            <p className={classes.aboutDescription}> In this application you can add the Custom Events and also comment that event Like whats you Recommandation after watching that Event you can also schedule the events event watch this events live also   </p>
      
 
            <h2 className={classes.aboutDescription}>
                       Languages  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>   <SiJavascript />    <FaCss3Alt/>   <SiNextDotJs/> </p>
+                     <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/>   <SiNextDotJs/> </p>
                        <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
                     </h2>
-                    <p style={{textAlign: 'left' , fontSize : '25px'}}>  <AiFillGithub/>  <FaFigma />  </p>
+                    <p className={classes.icons}>  <AiFillGithub/>  <FaFigma />  </p>
                     
                       <h2 className={classes.aboutDescription}>
                       Database  
                     </h2>
-                     <p style={{textAlign: 'left' , fontSize : '25px'}}>  <SiMongodb/> </p>
+                     <p className={classes.icons}>  <SiMongodb/> </p>
 
      
 

@@ -111,7 +111,7 @@
   text-align: center;
   cursor: pointer;
   font-size:20px;
-  margin: 0 0 0 100px;
+  margin-left:14%
 }
 
 
@@ -143,4 +143,27 @@
 .popup {
   text-align: left;
   margin-left: 14%;
+}
+
+
+@media (max-width: 768px) {
+  .buttonTwo{
+
+    text-align: center;
+    margin-left: 0%;
+  
+  }  
+  .heading{
+    margin-left: 13%;
+  }
+  .description{
+
+    margin-left: 8%;
+  }
+  .about {
+    margin-left:3%;
+  }
+  .aboutHeading{
+    margin-left:3%
+  }
 }

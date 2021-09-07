@@ -59,7 +59,7 @@ export default function Contact() {
                               <Navbar/>
                               <Grid container style={{marginBottom:'5%'}} >
                                              <Grid item md={1}></Grid>
-                                             <Grid item md={5} xs={12}>
+                                             <Grid className={classes.getTouch} item md={5} xs={12}>
                                            
                                            <h1 className={classes.heading}> Get in Touch</h1>
 
@@ -110,7 +110,7 @@ export default function Contact() {
                                              <Grid md={1} ></Grid>
 
 
-                                             <Grid item md={1} xs={6}>
+                                             <Grid item md={1} xs={6} className={classes.aboutHeading}>
                              <h2>About Me </h2>
 <Image src={myImage} width={100} height={120} />
   

@@ -34,7 +34,7 @@ export default function Homepage() {
 
                return (
                             <>
-                            <Grid  container style={{paddingBottom : '30px'}} > 
+                            <Grid  container className={classes.pad} > 
                                 
                                 <Grid item md={12} xs={12}>
                                    <h1 className={classes.size}> Successful Front-end Development</h1>
@@ -169,7 +169,7 @@ export default function Homepage() {
                                     </Grid>
 
 
-                            <Grid className={classes.projectWork} md={12} xs={12}>
+                            <Grid style={{marginBottom: '3%'}} className={classes.projectWork} md={12} xs={12}>
                               <Button />
                             </Grid>
 

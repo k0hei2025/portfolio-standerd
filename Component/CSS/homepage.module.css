@@ -41,6 +41,7 @@
 
 .projectWork {
   text-align: center;
+  
 }
 .projectSize {
   font-size: 22px;
@@ -56,6 +57,12 @@
 .aboutDescription {
   text-align: left;
   font-family: "Fira Sans";
+  margin-left: 4%;
+}
+.icons{
+  text-align: left;
+   font-size: 24px;
+    margin-left :4%
 }
 
 .bx {
@@ -67,6 +74,13 @@
   border-bottom: 0.4px;
 }
 
+.shifting {
+  margin-left: 3%;
+}
+.pad {
+  padding-bottom:  70px
+}
+
 @media (max-width: 768px) {
   .size {
     font-size: 20px;
@@ -76,6 +90,7 @@
 
   .size1 {
     font-size: 18px;
+    margin-left: 3%;
   }
   .cardHeading {
     font-size: 10px;
@@ -84,6 +99,7 @@
     font-size: 8px;
   }
   .aboutDescription {
+    text-align:center;
     font-size: 15px;
     font-weight: 700;
     margin-left: 3%;
@@ -91,5 +107,17 @@
   .projectWork {
     font-size: 10px;
     text-align: center;
+  }
+  .testinomialsDescription{
+  
+   margin: 10%;
+
+  }
+  .pad {
+    padding-bottom : 200px;
+  }
+  .icons {
+    text-align:center;
+    
   }
 }
