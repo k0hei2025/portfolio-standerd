@@ -1,9 +1,12 @@
+import { StopTwoTone } from "@material-ui/icons";
 import {createSlice , configureStore} from "@reduxjs/toolkit"
 
 const initialState = {
                mobState : false,
                progress : 0,
-               buffer : 10
+               buffer : 10,
+            
+               japanese : false,
 }
 
 const majorStoreSlice = createSlice({
@@ -19,9 +22,19 @@ const majorStoreSlice = createSlice({
                               setSpinnerTools(state : any , action : any){
                                     state.progress = action.payload.progress1,
                                     state.buffer = action.payload.buffer1             
-                              }
+                              },
+
+                              setJapanese(state : any , action : any){ 
+                                  
+
+                                    state.japanese =  action.payload;
+                              },
+
+
 
                },
+
+
 
 
 

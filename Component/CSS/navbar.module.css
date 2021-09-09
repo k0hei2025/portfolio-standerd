@@ -1,3 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Kaisei+Tokumin&display=swap');
+
+.jtext {
+ font-family: 'Kaisei Tokumin';
+ 
+}
+
+
 .navHead {
   font-size: auto;
   text-align: center;
@@ -31,9 +40,30 @@
   color: #ffffff;
 }
 
+.jgetCol {
+  color: #ffff;
+  font-family: 'Kaisei Tokumin' ;
+  font-weight: bold;
+}
+
 .navImg {
   text-align: left;
 }
+
+
+
+.btnGroupT {
+  color: white;
+  background-color: transparent;
+}
+
+.buttonGroupButton:hover{
+   background-color: #000000;
+   color : 'white'
+}
+
+
+/* Clear floats (clearfix hack) */
 
 @media (max-width: 768px) {
   .navHead {

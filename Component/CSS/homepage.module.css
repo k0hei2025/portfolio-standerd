@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Kaisei+Tokumin&display=swap');
 
+
+
+.jtext{
+    font-family: 'Kaisei Tokumin';
+    font-weight: 900;
+}
 .size {
   font-size: 50px;
   text-align: center;
@@ -33,14 +41,30 @@
   font-family: "Fira Sans";
 }
 
+.jcardHeading{
+    text-align: center;
+  font-weight: bolder;
+  font-family: 'Kaisei Tokumin';
+}
+
 .cardDescription {
   text-align: center;
 
   font-family: "Fira Sans";
 }
 
+.jcardDescription{
+    text-align: center;
+     font-family: 'Kaisei Tokumin';
+}
+
 .projectWork {
   text-align: center;
+  
+}
+.jprojectWork {
+  text-align: center;
+  font-family: 'Kaisei Tokumin';
   
 }
 .projectSize {
@@ -59,6 +83,13 @@
   font-family: "Fira Sans";
   margin-left: 4%;
 }
+
+.jaboutDescription {
+  text-align: left;
+   font-family: 'Kaisei Tokumin';
+  margin-left: 4%;
+}
+
 .icons{
   text-align: left;
    font-size: 24px;
@@ -80,8 +111,47 @@
 .pad {
   padding-bottom:  70px
 }
+.jSize{
+font-size: 50px;
+  text-align: center;
+font-family: 'Kaisei Tokumin';
+
+}
+
+.Jsize1{
+  font-size: 30px;
+  text-align: center;
+font-family: 'Kaisei Tokumin';
+}
+
+.align{
+  text-align:left;
+   font-family: "Fira Sans";
+  margin-right:10%;
+
+}
+.jalign{
+  text-align:left;
+ font-family: 'Kaisei Tokumin';
+  margin-right:10%;
+  
+}
+
 
 @media (max-width: 768px) {
+
+   .jSize {
+    font-size: 20px;
+
+    color: "red";
+  }
+
+
+  .Jsize1 {
+    font-size: 18px;
+    margin-left: 3%;
+  }
+
   .size {
     font-size: 20px;
 
@@ -92,10 +162,16 @@
     font-size: 18px;
     margin-left: 3%;
   }
+  .jcardHeading{
+      font-size: 10px;
+  }
   .cardHeading {
     font-size: 10px;
   }
   .cardDescription {
+    font-size: 8px;
+  }
+  .jcardDescription {
     font-size: 8px;
   }
   .aboutDescription {
@@ -104,6 +180,14 @@
     font-weight: 700;
     margin-left: 3%;
   }
+
+   .jaboutDescription {
+    text-align:center;
+    font-size: 15px;
+   
+    margin-left: 3%;
+  }
+
   .projectWork {
     font-size: 10px;
     text-align: center;

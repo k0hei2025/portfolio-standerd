@@ -11,6 +11,9 @@ import classes from '../styles/contact.module.css'
 import myImage from '../image/WhatsApp Image 2021-01-15 at 12.58.23 AM.jpg'
 import LinnerBuffer from '../Component/spinner'
 import { textAlign } from '@material-ui/system'
+import {useSelector} from 'react-redux'
+import { RootState } from '../store/store'
+import classNames from 'classnames'
 
 export default function Contact() {
 
@@ -20,6 +23,8 @@ export default function Contact() {
   const nameRef =    useRef <HTMLInputElement> (null);
   const emailRef =   useRef <HTMLInputElement> (null);
   const messageRef = useRef <HTMLInputElement> (null);
+
+  const language = useSelector((state : RootState) => state.japanese)
 
  const submitHandler = async(e : any) => {
          setLoading(true);
@@ -61,10 +66,11 @@ export default function Contact() {
                                              <Grid item md={1}></Grid>
                                              <Grid className={classes.getTouch} item md={5} xs={12}>
                                            
-                                           <h1 className={classes.heading}> Get in Touch</h1>
+                                         {language ? <h1 className={ classNames(classes.jtext , classes.heading) }>お問い合わせ </h1> :  <h1 className={classes.heading}> Get in Touch</h1>} 
 
-                                           <p className={classes.description}>Send a general message  I reply to you as soon as possible.</p>
-
+                                       {language ? <p className={ classNames(classes.jtext , classes.description) }>  メセージ送ってください私は早く返事します </p>
+  :  <p className={classes.description}>Send a general message  I reply to you as soon as possible.</p>
+ }   
                               <Grid container>
 
 <Grid item md={1}></Grid>
@@ -72,21 +78,22 @@ export default function Contact() {
 <Grid className={classes.formContainer} item md={12} xs={12}>
                
                   
-          {err ? <h2 className={classes.popup} style={{color:"#FF0000"}}>Invalid Parameters Make sure you fill form Correctly</h2> : <p></p> }
+          {err ? <h2 className={classes.popup} style={{color:"#FF0000"}}> {language ? "エーラがありましたもう一度チェックしてください" : ' Invalid Parameters Make sure you fill form Correctly'  }</h2> : <p></p> }
 
-           {form ? <h2 className={classes.popup} style={{color:"green"}}> Email sent Successfully </h2> : <p></p> }
+           {form ? <h2 className={classes.popup} style={{color:"green"}}> {language ? 'メール送りました' : '  Email sent Successfully '}</h2> : <p></p> }
              {loading ? <LinnerBuffer /> : <p></p> }  
 
                <form className={classes.form}  onSubmit={submitHandler}>
-               <h2> About You</h2>
+            {language ? <h2 className={classes.jtext}> あなたについて </h2> :  <h2> About You</h2>}  
 
- <p> Your Name</p>
+   {language ? <p className={classes.jtext}> 名前 </p> :    <p> Your Name</p> }
+ 
  <input name='username' type="text" className={classes.input} ref={nameRef} ></input>
                
-               <p> Email</p>
+             {language ? <p className={classes.jtext}> メール </p> : <p> Email</p> }  
  <input name='email' type="text" className={classes.input} ref={emailRef} ></input>
                
-               <p> General Message</p>
+          {language ? <p className={classes.jtext}>  メセージ  </p>:  <p> General Message</p> }    
  <textarea name='message' className={classes.area} type="textarea" rows="4" col="50"  ref={messageRef} ></textarea>
 
   <button type='submit' className={classes.buttonTwo} > <span> Send </span> </button>  
@@ -111,7 +118,7 @@ export default function Contact() {
 
 
                                              <Grid item md={1} xs={6} className={classes.aboutHeading}>
-                             <h2>About Me </h2>
+                          {language ? <h2 className={classes.jtext}>私について</h2> :  <h2>About Me </h2> }  
 <Image src={myImage} width={100} height={120} />
   
 
@@ -133,9 +140,12 @@ export default function Contact() {
 
 
                                              <Grid item md={2} xs={6} style={{textAlign: 'left' , marginTop: '4%'}}>
-                                                    <p className={classes.about}>
+                                             
+                                             {language ? <p className={classNames(classes.about , classes.jtext)}> 私は3年の経験を持つてフロントエンド開発者です、3か国語で話すことができます大学生です。 性能早いくて使う安いようなアプリケーション使います  </p> :                                                   <p className={classes.about}>
 I am a Front-end Developer with 3 years  experience, Trilingual, Undergraduate Student. I create successful websites that are Fast More Secure Well Designed.</p>          
+ }
 
+  
 
 
 

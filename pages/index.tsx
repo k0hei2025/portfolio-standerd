@@ -11,7 +11,7 @@ import { Grid } from '@material-ui/core'
 const Home: NextPage = () => {
   return (
     
-      <Grid style={{overflowX: 'hidden'}} container spacing={2}>
+      <Grid style={{overflow: 'hidden'}}> 
        <Navbar />
      <Homepage />
      <Footer/>

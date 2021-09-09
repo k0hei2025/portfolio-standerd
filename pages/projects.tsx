@@ -20,6 +20,7 @@ import Button from '../UX/button'
 export default function Pprojects() {
 
   const mobState = useSelector((state : RootState)=>state.mobState)
+  const language = useSelector((state : RootState)=>state.japanese)
 
   const dispatch  = useDispatch();
 
@@ -38,29 +39,32 @@ export default function Pprojects() {
                return (
                               <>
                               <Navbar />
-                                              <h1 className={classes.size}>Projects </h1>       
+                                     {language ? <h1 className={classes.jSize}>事業</h1>   :   <h1 className={classes.size}>Projects </h1>      }         
 
 
 <Grid className={classes.projectWork} container spacing={2}>
                      
                      <Grid  item md={3} xs={12}>
 
-                       <h1>Stream</h1>
+                {language ? <h1 className={classes.jtext}> ストリーム</h1> :  <h1>Stream</h1> }     
       
-                    <p  className={classes.aboutDescription} > I create that Application within a 15 days It't really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way  </p>
+               {language ? <p className={classes.jaboutDescription}> 私はこのアプリケーションは１５日間以内に完全しましたこの少し時間に大きいなアプリケーション作ることがとっても難しいですが負けるずに一生懸命に頑張りました結局完全しました。このアプリケーションのアイジアは教師は学生達にオンライン事業は便利くて色々たくさん機能性おかげで開催します </p> :    <p   className={classes.aboutDescription} > I create that Application within a 15 days It't really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way  </p> }  
 
-                    <h2 className={classes.aboutDescription}>
+                  {language ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
                       Languages  
-                    </h2>
+                    </h2> } 
                      <p className={classes.icons} >   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> </p>
-                       <h2 className={classes.aboutDescription}>
+                      
+                      {language ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
-                    </h2>
+                    </h2>}
+                      
                     <p className={classes.icons}> <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
                     
-                      <h2 className={classes.aboutDescription}>
+                     {language ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
                       Database  
-                    </h2>
+                    </h2> }
+                      
                      <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
@@ -80,22 +84,29 @@ export default function Pprojects() {
                      
                      <Grid  item md={3} xs={12}>
 
-                       <h1>Code Map</h1>
-                      
-                      <p className={classes.aboutDescription}>  The concept of this website is Collabaration and Sort out the Problems of Developers In this application a developers can collabarate there problematic code and other Developers helps him to correct the code or improve the codes  </p>
+{language ? <h1 className={classes.jtext}>コッドマップ </h1> :          <h1>Code Map</h1>}
+              
 
-                        <h2 className={classes.aboutDescription}>
+                    {language ? <p className={classes.jaboutDescription}> このアプリケーションについてアイジアは開発者達は相手やチムの問題は一緒に治すことができます問題治すばかりではなくコッドのデザインとか新しいアイジアでプロジェクトの効率は上がりことができます </p> :  <p className={classes.aboutDescription}>  The concept of this website is Collabaration and Sort out the Problems of Developers In this application a developers can collabarate there problematic code and other Developers helps him to correct the code or improve the codes  </p>}  
+                     
+
+                        {language ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
                       Languages  
-                    </h2>
+                    </h2> } 
+
+
+
                      <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/>   <SiNextDotJs/> </p>
-                       <h2 className={classes.aboutDescription}>
+                     
+                     {language ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
-                    </h2>
+                    </h2>}
+                      
                     <p className={classes.icons}>  <AiFillGithub/>  <FaFigma />  </p>
                     
-                      <h2 className={classes.aboutDescription}>
+                       {language ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
                       Database  
-                    </h2>
+                    </h2> }
                      <p className={classes.icons}>  <SiFirebase/>  </p>
 
      
@@ -118,22 +129,28 @@ export default function Pprojects() {
                      
                      <Grid  item md={3} xs={12}>
 
-                       <h1>Stream-New</h1>
+{language ? <h1 className={classes.jtext}> 新しいストリーム </h1> :    <h1>Stream-New</h1> }
+                   
+                   {language ? <p className={classes.jaboutDescription}> これは以前のストリームの更新アプリケーションであるだけでなく、遅延の問題を改善できるだけでなく、このアプリケーションに追加する新しい追加事項は、この認証されていないユーザーの助けを借りて独立した認証済みデータを改善することですデータを見ることができず、イベントはそこにビデオを見ることができません 認証されたユーザーが不要なユーザーにアクセスを許可した場合、画面が表示され、操作を実行できません。オーディオのみを開くことができます。  </p> : 
+                       <p className={classes.aboutDescription}> This is the Renew  application of previous stream not only that we can improve the latency problem the new additional things which i add in this application is improve the independent authenticated data with the help of this unauthenticated users cant see any data and event cant see there video screen and not able to perform any operation if the authenticated user give access to unwanted user then they can only open there audio only  </p>}
 
-                       <p className={classes.aboutDescription}> This is the Renew  application of previous stream not only that we can improve the latency problem the new additional things which i add in this application is improve the independent authenticated data with the help of this unauthenticated users cant see any data and event cant see there video screen and not able to perform any operation if the authenticated user give access to unwanted user then they can only open there audio only  </p>
-     
-      <h2 className={classes.aboutDescription}>
+
+
+      
+
+                        {language ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
                       Languages  
-                    </h2>
+                    </h2> } 
+
                      <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
-                       <h2 className={classes.aboutDescription}>
+                      {language ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
-                    </h2>
+                    </h2>}
                     <p className={classes.icons}> <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
                     
-                      <h2 className={classes.aboutDescription}>
+                    {language ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
                       Database  
-                    </h2>
+                    </h2> }
                      <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
@@ -156,23 +173,24 @@ export default function Pprojects() {
                      
                      <Grid  item md={3} xs={12}>
 
-                      <h1>Microsoft Campuss Club (SVVV)</h1>
+                   {language ? <h1 className={classes.jtext}> マイクロソフトキャンパスクラブ </h1>  : <h1>Microsoft Campuss Club (SVVV)  </h1> } 
 
-                        <p className={classes.aboutDescription}> This is my club application which I work as front-end developer  </p>
+                    {language ? <p className={classes.jaboutDescription}> このアプリケーションは私の大学のマイクロソフトキャンパスと言うクラブのアプリケーションです私はフロントエンド開発者によう働きました </p> :  <p className={classes.aboutDescription}> This is my club application which I work as front-end developer  </p>
+ }   
 
-
-                        <h2 className={classes.aboutDescription}>
+  {language ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
                       Languages  
-                    </h2>
+                    </h2> } 
                      <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
-                       <h2 className={classes.aboutDescription}>
+                       {language ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
-                    </h2>
+                    </h2>}
                     <p className={classes.icons}> <FaDocker/> <AiFillGithub/>   <FaTrello/>  <FaFigma /> </p>
                     
-                      <h2 className={classes.aboutDescription}>
+                     
+                    {language ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
                       Database  
-                    </h2>
+                    </h2> }
                      <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
@@ -194,23 +212,25 @@ export default function Pprojects() {
                      
                      <Grid  item md={3} xs={12}>
 
-                       <h1>AnimeBlog</h1>
+                {language ? <h1 className={classes.jtext}> アニメブログ </h1>  :   <h1>AnimeBlog</h1> }      
      
-                            <p className={classes.aboutDescription}> This application is based on the peoples who like and want to see Animes so that the peoples post there anime which they already watched and want to share to other peoples and recommand to other peoples and
+                       
+                       {language ? <p className={classes.jaboutDescription}>  このアプリケーションはアニメが好きやら見たい関係人にとって作りました人達は見たアニメはこのアプリケーションに役職ってそれのおかげで見たい人達はこの役職見てこのアニメについてアイジアがわかりますそれではなくこのアプリケーションに多い歌のボタンがありますこのボタン押すと歌は聞きます歌は聞きながらこのアプリケーションにアニメ見るとおすすめです  </p> : <p className={classes.aboutDescription}> This application is based on the peoples who like and want to see Animes so that the peoples post there anime which they already watched and want to share to other peoples and recommand to other peoples and
                              You can also see all anime by activating music buttons and enjoy this application 
-                              </p>
-                             <h2 className={classes.aboutDescription}>
+                              </p>}
+                            
+                           {language ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
                       Languages  
-                    </h2>
+                    </h2> } 
                      <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> <FaReact/> </p>
-                       <h2 className={classes.aboutDescription}>
+                       {language ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
-                    </h2>
+                    </h2>}
                     <p className={classes.icons}>  <AiFillGithub/>   <FaTrello/>  <FaFigma /> </p>
                     
-                      <h2 className={classes.aboutDescription}>
+                        {language ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
                       Database  
-                    </h2>
+                    </h2> }
                      <p className={classes.icons}>  <SiFirebase/>  </p>
 
 
@@ -233,23 +253,23 @@ export default function Pprojects() {
                      
                      <Grid  item md={3} xs={12}>
 
-                       <h1>Event-Loop </h1>
-                       
-                            <p className={classes.aboutDescription}> In this application you can add the Custom Events and also comment that event Like whats you Recommandation after watching that Event you can also schedule the events event watch this events live also   </p>
-     
+                   {language ? <h1 className={classes.jtext}>イベントループ </h1> :  <h1>Event-Loop </h1>}   
+                        
+                        {language ? <p className={classes.jaboutDescription}> このアプリケーションでは、カスタムイベントを追加し、そのイベントにコメントすることもできます。そのイベントを見た後の推奨事項のように、イベントイベントをスケジュールすることもできます。このイベントをライブで見ることもできます。  </p> :    <p className={classes.aboutDescription}> In this application you can add the Custom Events and also comment that event Like whats you Recommandation after watching that Event you can also schedule the events event watch this events live also   </p>
+      }
+                         
 
-           <h2 className={classes.aboutDescription}>
+          {language ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
                       Languages  
-                    </h2>
+                    </h2> } 
                      <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/>   <SiNextDotJs/> </p>
-                       <h2 className={classes.aboutDescription}>
+                        {language ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
                       Tools And Libraries  
-                    </h2>
+                    </h2>}
                     <p className={classes.icons}>  <AiFillGithub/>  <FaFigma />  </p>
-                    
-                      <h2 className={classes.aboutDescription}>
+                       {language ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
                       Database  
-                    </h2>
+                    </h2> }
                      <p className={classes.icons}>  <SiMongodb/> </p>
 
      

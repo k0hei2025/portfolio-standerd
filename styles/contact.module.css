@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Kaisei+Tokumin&display=swap');
 
 
 .heading {
@@ -144,7 +145,10 @@
   text-align: left;
   margin-left: 14%;
 }
-
+.jtext {
+ font-family: 'Kaisei Tokumin';
+ 
+}
 
 @media (max-width: 768px) {
   .buttonTwo{
