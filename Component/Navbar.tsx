@@ -1,7 +1,7 @@
 import React, { useState , useEffect } from 'react'
 import { FC } from 'react'
 import {Button, ButtonGroup, Grid } from '@material-ui/core'
-import IconImg from '../image/v-icon-22.jpg'
+import IconImg from '../image/icons8-v-64.png'
 import Image from 'next/image'
 import classNames from 'classnames'
 import Link from 'next/link'
@@ -18,8 +18,8 @@ import {actionStore , RootState} from '../store/store'
 export default function  Navbar() {
                 
 const [hamburger , setHamburger] = useState(false); 
-const [hamburgerDesignState , setHamburgerDesignState ] = useState({})
-const [webDesignState , setWebDesignState ] = useState({})
+const [hamburgerDesignState , setHamburgerDesignState ] = useState({val : null})
+const [webDesignState , setWebDesignState ] = useState({val : null})
 const [lang , setLang] = useState(false);
 
 
@@ -95,7 +95,7 @@ if (window.innerWidth >= 900){
     
 
   <Grid md={5} xs={2} className={classes.navImg}>
-           <Link href='/'><Image src={IconImg}  width={50} height={50}/></Link> 
+           <Link href='/'><Image src={IconImg}  width={50} height={50} alt="Icon"/></Link> 
 </Grid>          
                         
                     <Grid item md={1} xs={2} className={buttonClass} >

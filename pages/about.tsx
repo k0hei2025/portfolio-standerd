@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
 import { Grid } from '@material-ui/core'
@@ -6,17 +6,19 @@ import classes from '../Component/CSS/homepage.module.css'
 import Image from  'next/image'
 import myProfile from '../image/WhatsApp Image 2021-01-15 at 12.58.23 AM.jpg'
 
+import  {useSelector , useDispatch} from 'react-redux'
+
 import {RootState} from '../store/store'
 import Button from '../UX/button'
-import { useSelector } from 'react-redux'
-
-export default function aboutMe() {
-
-  const language = useSelector((state : RootState) => state.japanese);
 
 
+ function About() {
+
+
+ const language = useSelector((state : RootState) => state.japanese)
                return (
-                              <>
+                 
+                           <>
                               <Navbar />
         <Grid container className={classes.boxs}> 
                          <Grid  item md={12} xs={12}>
@@ -60,6 +62,8 @@ I work to make a better web one that is fast, easy to use, beautiful, accessible
 
 
                                                 <Footer /> 
-                              </>
+                          </>
                )
 }
+
+export default About;

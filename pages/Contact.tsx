@@ -22,7 +22,7 @@ export default function Contact() {
   const [loading , setLoading] = useState(false);
   const nameRef =    useRef <HTMLInputElement> (null);
   const emailRef =   useRef <HTMLInputElement> (null);
-  const messageRef = useRef <HTMLInputElement> (null);
+  const messageRef = useRef <HTMLTextAreaElement> (null);
 
   const language = useSelector((state : RootState) => state.japanese)
 
@@ -94,7 +94,7 @@ export default function Contact() {
  <input name='email' type="text" className={classes.input} ref={emailRef} ></input>
                
           {language ? <p className={classes.jtext}>  メセージ  </p>:  <p> General Message</p> }    
- <textarea name='message' className={classes.area} type="textarea" rows="4" col="50"  ref={messageRef} ></textarea>
+ <textarea name='message' className={classes.area} rows={4} cols={23} ref={messageRef} ></textarea>
 
   <button type='submit' className={classes.buttonTwo} > <span> Send </span> </button>  
         

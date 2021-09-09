@@ -48,7 +48,7 @@ export default function Pprojects() {
 
                 {language ? <h1 className={classes.jtext}> ストリーム</h1> :  <h1>Stream</h1> }     
       
-               {language ? <p className={classes.jaboutDescription}> 私はこのアプリケーションは１５日間以内に完全しましたこの少し時間に大きいなアプリケーション作ることがとっても難しいですが負けるずに一生懸命に頑張りました結局完全しました。このアプリケーションのアイジアは教師は学生達にオンライン事業は便利くて色々たくさん機能性おかげで開催します </p> :    <p   className={classes.aboutDescription} > I create that Application within a 15 days It't really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way  </p> }  
+               {language ? <p className={classes.jaboutDescription}> 私はこのアプリケーションは１５日間以内に完全しましたこの少し時間に大きいなアプリケーション作ることがとっても難しいですが負けるずに一生懸命に頑張りました結局完全しました。このアプリケーションのアイジアは教師は学生達にオンライン事業は便利くて色々たくさん機能性おかげで開催します </p> :    <p   className={classes.aboutDescription} > I create that Application within a 15 days It really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way  </p> }  
 
                   {language ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
                       Languages  

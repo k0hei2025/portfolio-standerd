@@ -6,7 +6,7 @@ import {RootState} from '../store/store'
 
 import  {useSelector} from 'react-redux'
 
-export default function button() {
+export default function Button() {
 
      const language = useSelector((state : RootState) => state.japanese);
 

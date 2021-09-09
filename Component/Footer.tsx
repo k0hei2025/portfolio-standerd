@@ -15,9 +15,14 @@ import classNames from 'classnames'
 
 export default function Footer() {
 
+     type obn = {
+          val : any
+     }
+
+
     const [ mobile , setMobile] = useState(false);
-    const [contentStruct , setContentStruct] = useState({});
-    const [webStruct , setWebStruct] = useState({});
+    let [contentStruct , setContentStruct] = useState({val : null}) ;
+    let [webStruct  , setWebStruct ]  = useState({val : null});
 
     const japaneseLanguage = useSelector((state : RootState)=>state.japanese)
 
@@ -28,7 +33,7 @@ export default function Footer() {
      if (window.innerWidth <= 900){
           setMobile(true);
 
-          setContentStruct({
+          setContentStruct(  { 
                val :                            
                <>
 <Grid item md={2} xs={6} className={classes.imagePosition}>
@@ -136,7 +141,7 @@ export default function Footer() {
                                   
 
 
- {mobile ? contentStruct.val :   webStruct.val }
+ {mobile ? contentStruct.val  :   webStruct.val  }
                              </Grid>
                )
 }
