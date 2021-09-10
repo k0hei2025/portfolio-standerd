@@ -65,9 +65,10 @@ export default function Homepage() {
 
 <Grid container spacing={2} style={ { marginTop: '4%'} }>
 
-<Grid item md={3} xs={2}></Grid>
+<Grid item md={2} ></Grid>
 
-                            <Grid item md={2} xs={3} className={classes.card}>
+
+  <Grid item md={2} xs={3} className={classes.card}>
                                            
                                            <Image src={AndroidImg} width={150} height={200} />
 
@@ -77,6 +78,9 @@ export default function Homepage() {
                                          {japaneseLanguage? <p className={classes.jcardDescription}>ビジネス目標を達成する最適なユーザーエクスペリエンスのために構築されたレスポンシブウェブサイト </p>  :  <p className={classes.cardDescription}>Responsive websites built for an optimal user experience that achieves your business goals.</p> } 
                                 </Grid> 
 
+<Grid item xs={1} ></Grid>
+                          
+
                             <Grid item md={2} xs={3} className={classes.card}>
                                            <Image src={Tools}  width={150} height={200} />
 
@@ -84,20 +88,23 @@ export default function Homepage() {
                           {japaneseLanguage ? <p className={classes.jcardDescription}>君のウェブサイトの効率は早いくて探す安い観客に色々方法で戻ります</p>  : <p className={classes.cardDescription}>Make your website fast, easy to find, and reach the widest audience possible.</p>}  
                                 </Grid>
 
+
+
+       <Grid item xs={1}></Grid>     
                                  <Grid item md={2} xs={3} className={classes.card}>
                                      
                                            <Image src={Lock}  width={180} height={200} />
 
-                               {japaneseLanguage ? <p className={classes.jcardHeading}> 強安全 </p>  :  <p className={classes.cardHeading}>  Fully Secured    </p>
+                               {japaneseLanguage ? <p className={classes.jcard3Heading}> 強安全 </p>  :  <p  className={classes.card3Heading}>  Fully Secured    </p>
  }                              
  
-  {japaneseLanguage ?  <p className={classes.jcardDescription}> 君のアプリケーションのデータとかデータベスは安全です </p>   :  <p className={classes.cardDescription}> Secure Your Application Database and Data like Personal information </p>
+  {japaneseLanguage ?  <p className={classes.jcard3Description}> 君のアプリケーションのデータとかデータベスは安全です </p>   :  <p className={classes.card3Description}> Secure Your Application Database and Data like Personal information </p>
 }
 
                                 </Grid>
-                                
+                    
                             
-<Grid item md={3} xs={2}></Grid>
+
                             
 </Grid>
 
@@ -114,61 +121,78 @@ export default function Homepage() {
 
   </Grid>
                            
-                   <Grid className={classes.projectWork} container spacing={2}>
+                
+<Grid className={classes.projectWork} container spacing={2}>
                      
-                     <Grid  item md={1} xs={1}></Grid>
 
-                     <Grid  item md={2} xs={10}>
+                  <Grid style={{marginTop: "7%"}} className={classes.projectWork} container spacing={2}>
+                                  <Grid item md={12} xs={12}> {japaneseLanguage ? <h1  className={classes.jtext}>ストリーム </h1> :          <h1>Stream</h1>}</Grid>
+                      <Grid  item md={2} > </Grid>
+                     
+  
 
-                     {japaneseLanguage ? <h1 className={classes.jalign}> ストリーム </h1> :   <h1 className={classes.align}>Stream</h1> } 
-                            
-                               
-      
-               {japaneseLanguage ? <p  className={ classes.jalign}> 私はこのアプリケーションは１５日間以内に完全しましたこの少し時間に大きいなアプリケーション作ることがとっても難しいですが負けるずに一生懸命に頑張りました結局完全しました。このアプリケーションのアイジアは教師は学生達にオンライン事業は便利くて色々たくさん機能性おかげで開催します </p> :    <p  className={ classNames( classes.align) } > I create that Application within a 15 days It really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way  </p> }  
+                     <Grid  item md={4} xs={12}>
 
-                  {japaneseLanguage ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
+
+           
+
+                    {japaneseLanguage ? <p  className={classes.jprojectCard}> 私はこのアプリケーションは１５日間以内に完全しましたこの少し時間に大きいなアプリケーション作ることがとっても難しいですが負けるずに一生懸命に頑張りました結局完全しました。このアプリケーションのアイジアは教師は学生達にオンライン事業は便利くて色々たくさん機能性おかげで開催します </p> :  <p className={classes.projectCard}> I create that Application within a 15 days It really a big task for me But I do my best to Complete that Application this application concept is based on video conferencing like professors can held class with more functionality and  in Secure Way </p>}  
+                     
+
+                        {japaneseLanguage ? <h2 className={classes.jheadingCard}> 言語 </h2> :  <h2 className={classes.headingCard}>
                       Languages  
                     </h2> } 
-                     <p className={classes.icons} >   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> </p>
-                      
-                      {japaneseLanguage ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
+
+
+
+                     <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/> <AiFillHtml5/>  <FaNodeJs/> </p>
+                     
+                     {japaneseLanguage ? <h2 className={classes.jheadingCard}> ツールとかライブラリ </h2> :  <h2 className={classes.headingCard}>
                       Tools And Libraries  
                     </h2>}
                       
-                    <p className={classes.icons}> <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
+                    <p className={classes.icons}>  <FaDocker/> <AiFillGithub/>  <SiWebrtc/> <SiSocketDotIo/> <SiPeertube /> <SiJira/>  <FaTrello/>  <FaFigma /> </p>
                     
-                     {japaneseLanguage ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
+                       {japaneseLanguage ? <h2 className={classes.jheadingCard}>  データベース </h2> : <h2 className={classes.headingCard}>
                       Database  
                     </h2> }
-                      
                      <p className={classes.icons}>  <SiFirebase/>  </p>
 
-                     </Grid>
-                     {mobState ? <p></p> :    <Grid  item md={5} xs={12}>                      
-                            <Link href="https://stream-321403.el.r.appspot.com/"><Image src={imageBoxWeb.stream} height={500} width={700}  /></Link>
-                     </Grid>}
-                  
-
-                     <Grid  item md={4} xs={12} >
-                                   <Link href="https://stream-321403.el.r.appspot.com/"><Image src={imageBoxMob.stream} height={500} width={300} /></Link>
-                     </Grid>
-
-                  </Grid>
-    
-                     <Grid style={{marginTop: "7%"}} className={classes.projectWork} container spacing={2}>
-
-      <Grid  item xs={1}></Grid>
-
-                     <Grid  item md={2} xs={12}>
-
-                     {japaneseLanguage ? <h1 className={classes.jalign}> コードマップ</h1> : <h1 className={classes.align}>Code Map</h1>}
      
 
+                     </Grid>
 
-      {japaneseLanguage ? <p className={classes.jalign}> このアプリケーションについてアイジアは開発者達は相手やチムの問題は一緒に治すことができます問題治すばかりではなくコッドのデザインとか新しいアイジアでプロジェクトの効率は上がりことができます </p> :  <p className={classes.align}>  The concept of this website is Collabaration and Sort out the Problems of Developers In this application a developers can collabarate there problematic code and other Developers helps him to correct the code or improve the codes  </p>}  
+                   {mobState ? <p></p> :  <Grid style={{textAlign: 'center' , marginTop: '5%'}}  item md={4} xs={12}>
+                             <Link href="https://stream-321403.el.r.appspot.com/"><Image src={imageBoxWeb.stream} height={500} width={800} /></Link>
+                     </Grid>} 
+
+
+
+                   {mobState ? <Grid  item md={4} xs={12} >
+                                           <Link href="https://stream-321403.el.r.appspot.com/"><Image src={imageBoxMob.stream} height={300} width={200} /></Link>
+                     </Grid> : <p></p> }  
+
+</Grid>
+                    
+              
+
+                  </Grid>
+                  
+               <Grid style={{marginTop: "7%"}} className={classes.projectWork} container spacing={2}>
+                                  <Grid item md={12} xs={12}> {japaneseLanguage ? <h1 className={classes.jtext}>コッドマップ </h1> :          <h1>Code Map</h1>}</Grid>
+                      <Grid  item md={2} > </Grid>
+                     
+  
+
+                     <Grid  item md={4} xs={12}>
+
+
+           
+
+                    {japaneseLanguage ? <p  className={classes.jprojectCard}> このアプリケーションについてアイジアは開発者達は相手やチムの問題は一緒に治すことができます問題治すばかりではなくコッドのデザインとか新しいアイジアでプロジェクトの効率は上がりことができます </p> :  <p className={classes.projectCard}>  The concept of this website is Collabaration and Sort out the Problems of Developers In this application a developers can collabarate there problematic code and other Developers helps him to correct the code or improve the codes  </p>}  
                      
 
-                        {japaneseLanguage ? <h2 className={classes.jaboutDescription}> 言語 </h2> :  <h2 className={classes.aboutDescription}>
+                        {japaneseLanguage ? <h2 className={classes.jheadingCard}> 言語 </h2> :  <h2 className={classes.headingCard}>
                       Languages  
                     </h2> } 
 
@@ -176,27 +200,30 @@ export default function Homepage() {
 
                      <p className={classes.icons}>   <SiJavascript />    <FaCss3Alt/>   <SiNextDotJs/> </p>
                      
-                     {japaneseLanguage ? <h2 className={classes.jaboutDescription}> ツールとかライブラリ </h2> :  <h2 className={classes.aboutDescription}>
+                     {japaneseLanguage ? <h2 className={classes.jheadingCard}> ツールとかライブラリ </h2> :  <h2 className={classes.headingCard}>
                       Tools And Libraries  
                     </h2>}
                       
                     <p className={classes.icons}>  <AiFillGithub/>  <FaFigma />  </p>
                     
-                       {japaneseLanguage ? <h2 className={classes.jaboutDescription}>  データベース </h2> : <h2 className={classes.aboutDescription}>
+                       {japaneseLanguage ? <h2 className={classes.jheadingCard}>  データベース </h2> : <h2 className={classes.headingCard}>
                       Database  
                     </h2> }
                      <p className={classes.icons}>  <SiFirebase/>  </p>
 
+     
+
                      </Grid>
 
-                   {mobState ? <p></p> :  <Grid  item md={5} xs={12}>
-                              <Image src={imageBoxWeb.codeMap} height={500} width={700} />
+                   {mobState ? <p></p> :  <Grid style={{textAlign: 'center' , marginTop: '5%'}}  item md={5} xs={12}>
+                              <Image src={imageBoxWeb.codeMap} height={500} width={800} />
                      </Grid>} 
 
 
-                     <Grid  item md={4} xs={12} >
-                                            <Image src={imageBoxMob.codeMap} height={500} width={300} />
-                     </Grid>
+
+                   {mobState ? <Grid  item md={4} xs={12} >
+                                            <Image src={imageBoxMob.codeMap} height={300} width={200} />
+                     </Grid> : <p></p> }  
 
 </Grid>
   <Grid  item xs={1}></Grid>

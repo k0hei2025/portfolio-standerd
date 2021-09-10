@@ -68,7 +68,7 @@ useEffect(() =>{
   
     <ul className={burgerClass.menu} >
       <Link href="/" passHref><li>{languageChange ? <p className={classes.jtext}> ホーム </p> : <p> Home </p> }</li></Link>
-      <Link href="/aboutMe" passHref><li> {languageChange ? <p className={classes.jtext}> 私について </p>   : <p> About </p> }</li></Link>
+      <Link href="/about" passHref><li> {languageChange ? <p className={classes.jtext}> 私について </p>   : <p> About </p> }</li></Link>
       <Link href="/projects" passHref><li> {languageChange ? <p className={classes.jtext}> 事業 </p> : <p> Projects </p> }</li></Link>
      <Link href="/testimonials" passHref><li> {languageChange ? <p className={classes.jtext}> お客様の声 </p> : <p> Testimonials </p> }</li></Link>
     
@@ -110,7 +110,7 @@ if (window.innerWidth >= 900){
 </p> :<p className={classes.linkColor}>testimonials</p> }</Link>
 </Grid>
 <Grid  item md={1} xs={2}  className={buttonClass}>
-         <Link  href="/aboutMe" passHref>{languageChange ? <p className={ classNames(classes.linkColor ,classes.jtext ) }> 私について
+         <Link  href="/about" passHref>{languageChange ? <p className={ classNames(classes.linkColor ,classes.jtext ) }> 私について
 </p> :<p className={classes.linkColor}>About</p> }</Link>
 </Grid>
 <Grid item md={1} xs={2} className={ classNames(buttonClass , classes.get , classes.getTouch)} >

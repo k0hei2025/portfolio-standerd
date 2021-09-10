@@ -23,7 +23,10 @@
   text-align: center;
   font-family: "Fira Sans";
   font-weight: bolder;
+
 }
+
+
 
 .testinomialsDescription {
   text-align: center;
@@ -47,6 +50,22 @@
   font-family: 'Kaisei Tokumin';
 }
 
+.headingCard{
+   text-align: left;
+  font-weight: bolder;
+  font-family: "Fira Sans";
+  margin-left: 4%;
+   
+}
+
+.jheadingCard{
+    margin-left: 4%;
+     text-align: left;
+  font-weight: bolder;
+   font-family: 'Kaisei Tokumin';
+}
+
+
 .cardDescription {
   text-align: center;
 
@@ -57,6 +76,37 @@
     text-align: center;
      font-family: 'Kaisei Tokumin';
 }
+
+.card3Heading {
+  text-align: center;
+  font-weight: bolder;
+  font-family: "Fira Sans";
+  margin-top: 15px;
+}
+
+.jcard3Heading{
+    text-align: center;
+  font-weight: bolder;
+  font-family: 'Kaisei Tokumin';
+    margin-top: 15px;
+}
+
+
+
+
+.card3Description {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Fira Sans";
+}
+
+.jcard3Description{
+    text-align: center;
+     font-family: 'Kaisei Tokumin';
+      margin-top: 15px;
+}
+
+
 
 .projectWork {
   text-align: center;
@@ -82,6 +132,40 @@
   text-align: left;
   font-family: "Fira Sans";
   margin-left: 4%;
+ 
+}
+.aboutsDescription {
+  text-align: left;
+  font-family: "Fira Sans";
+  margin-left: 4%;
+  font-size: 20px;
+ 
+}
+
+.projectCard {
+  text-align: left;
+  font-family: "Fira Sans";
+  margin-left: 4%;
+  margin-top: 15%;
+ 
+}
+.jprojectCard{
+  
+  text-align: left;
+     font-family: 'Kaisei Tokumin';
+  margin-left: 4%;
+  margin-top: 15%;
+ 
+}
+
+
+
+.projectHead {
+
+  position: absolute;
+  text-align: left;
+  font-family: "Fira Sans";
+  bottom: 50%;
 }
 
 .jaboutDescription {
@@ -90,10 +174,18 @@
   margin-left: 4%;
 }
 
+.jaboutsDescription {
+  text-align: left;
+   font-family: 'Kaisei Tokumin';
+  margin-left: 4%;
+    font-size: 20px;
+}
+
 .icons{
   text-align: left;
    font-size: 24px;
-    margin-left :4%
+   margin-left:4%
+
 }
 
 .bx {
@@ -138,6 +230,21 @@ font-family: 'Kaisei Tokumin';
 }
 
 
+
+.toolsCard{
+  
+  margin-left: 100%;
+
+}
+
+.projectWorksBorder{
+  text-align: center;
+  border: solid;
+  border-radius: 1%;
+  
+}
+
+
 @media (max-width: 768px) {
 
    .jSize {
@@ -168,20 +275,48 @@ font-family: 'Kaisei Tokumin';
   .cardHeading {
     font-size: 10px;
   }
+  .card3Heading{
+    font-size: 10px;
+    margin-top:35%;
+  }
   .cardDescription {
     font-size: 8px;
+  }
+  .card3Description{
+    font-size: 8px;
+  }
+  .jcard3Heading{
+    font-size: 10px;
+    margin-top:35%;
   }
   .jcardDescription {
     font-size: 8px;
   }
+  .jcard3Description{
+      font-size: 8px;
+  }
   .aboutDescription {
-    text-align:center;
+    text-align:left;
     font-size: 15px;
     font-weight: 700;
     margin-left: 3%;
   }
 
    .jaboutDescription {
+    text-align:center;
+    font-size: 15px;
+   
+    margin-left: 3%;
+  }
+
+  .aboutsDescription {
+    text-align:left;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 3%;
+  }
+
+   .jaboutsDescription {
     text-align:center;
     font-size: 15px;
    
@@ -203,5 +338,18 @@ font-family: 'Kaisei Tokumin';
   .icons {
     text-align:center;
     
+  }
+  .projectCard{
+    margin-top: 0%;
+    text-align:center;
+    font-size: 15px;
+    font-weight:700;
+  }
+  .jprojectCard{
+    margin-top: 0%;
+    text-align:center;
+  }
+  .headingCard{
+    text-align:center;
   }
 }
