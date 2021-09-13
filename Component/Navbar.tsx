@@ -97,7 +97,7 @@ if (window.innerWidth >= 900){
                         <>
     
 
-  <Grid md={5} xs={2} className={classes.navImg}>
+  <Grid md={4} xs={2} className={classes.navImg}>
            <Link href='/'><Image src={IconImg}  width={50} height={50} alt="Icon"/></Link> 
 </Grid>          
                         
@@ -116,11 +116,20 @@ if (window.innerWidth >= 900){
          <Link  href="/about" passHref>{languageChange ? <p className={ classNames(classes.linkColor ,classes.jtext ) }> 私について
 </p> :<p className={classes.linkColor}>About</p> }</Link>
 </Grid>
+
+<Grid  item md={1} xs={2}  className={buttonClass}>
+   
+            {languageChange ?  <a href="履歴書.pdf" download="履歴書.pdf"><p  style={{color: 'black'}} className={classNames(classes.linkColor , classes.jgetCol) } > 履歴書 </p></a>  :   
+
+      <a href="profile.pdf" download="resume.pdf"><p style={{color: 'black'}} className={classNames( classes.linkColor , classes.getCol )}> Resume</p></a> }
+</Grid>
+
 <Grid item md={1} xs={2} className={ classNames(buttonClass , classes.get , classes.getTouch)} >
           <Link href="/Contact" passHref>{languageChange ? <p className={classNames(classes.linkColor , classes.jgetCol) }> お問い合わせ </p> :   
          <p className={classNames( classes.linkColor , classes.getCol )}> Get in Touch</p> }</Link>
                     
 </Grid>
+
 
 
 
