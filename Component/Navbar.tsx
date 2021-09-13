@@ -72,6 +72,9 @@ useEffect(() =>{
       <Link href="/about" passHref><li> {languageChange ? <p className={classes.jtext}> 私について </p>   : <p> About </p> }</li></Link>
       <Link href="/projects" passHref><li> {languageChange ? <p className={classes.jtext}> 事業 </p> : <p> Projects </p> }</li></Link>
      <Link href="/testimonials" passHref><li> {languageChange ? <p className={classes.jtext}> お客様の声 </p> : <p> Testimonials </p> }</li></Link>
+     {languageChange ?  <a href="履歴書.pdf" download="履歴書.pdf"><p  style={{color: 'black'}} className={classNames(classes.linkColor , classes.jgetCol) } > 履歴書 </p></a>  :   
+
+      <a href="profile.pdf" download="resume.pdf"><p style={{color: 'black'}} className={classNames( classes.linkColor , classes.getCol )}> Resume</p></a> }
     
   <Link href="/" passHref><li  style={{fontSize:"18px"}} className={burgerClass.languageBtn} onClick={englishHandler}> Eng</li></Link>
   <Link  href="/" passHref><li style={{fontSize:"18px"}} className={burgerClass.jlanguageBtn} onClick={japaneseHandler}>JP</li></Link>
