@@ -1,7 +1,7 @@
 import React, { useState , useEffect } from 'react'
 import { FC } from 'react'
 import {Button, ButtonGroup, Grid } from '@material-ui/core'
-import IconImg from '../image/icons8-v-64.png'
+import IconImg from '../image/ClipartKey_2483016.png'
 import Image from 'next/image'
 import classNames from 'classnames'
 import Link from 'next/link'
@@ -67,15 +67,18 @@ useEffect(() =>{
     
   
     <ul className={burgerClass.menu} >
+      <div className={burgerClass.menuDiv}>  
       <Link href="/" passHref><li>{languageChange ? <p className={classes.jtext}> ホーム </p> : <p> Home </p> }</li></Link>
       <Link href="/about" passHref><li> {languageChange ? <p className={classes.jtext}> 私について </p>   : <p> About </p> }</li></Link>
       <Link href="/projects" passHref><li> {languageChange ? <p className={classes.jtext}> 事業 </p> : <p> Projects </p> }</li></Link>
      <Link href="/testimonials" passHref><li> {languageChange ? <p className={classes.jtext}> お客様の声 </p> : <p> Testimonials </p> }</li></Link>
     
-  <Link href="/" passHref><li  onClick={englishHandler} style={{fontSize:'15px' , fontFamily:"sans-serif"}}> Eng</li></Link>
-  <Link  href="/" passHref><li onClick={japaneseHandler}style={{fontSize:'15px' , fontFamily:"sans-serif"}}>JP</li></Link>
+  <Link href="/" passHref><li  style={{fontSize:"18px"}} className={burgerClass.languageBtn} onClick={englishHandler}> Eng</li></Link>
+  <Link  href="/" passHref><li style={{fontSize:"18px"}} className={burgerClass.jlanguageBtn} onClick={japaneseHandler}>JP</li></Link>
 
       <Link href="/Contact" passHref><li><Buttons/></li></Link>
+   
+    </div>
     </ul>
   </div>
 </nav>
