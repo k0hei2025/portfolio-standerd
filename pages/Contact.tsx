@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
 import { Grid, LinearProgress } from '@material-ui/core'
@@ -23,6 +23,16 @@ export default function Contact() {
   const nameRef =    useRef <HTMLInputElement> (null);
   const emailRef =   useRef <HTMLInputElement> (null);
   const messageRef = useRef <HTMLTextAreaElement> (null);
+
+   const [length , setLength] = useState(false);
+
+   useEffect(()=>{
+        if (window.innerWidth<=900){
+          setLength(true);
+        }
+   },[length])
+
+
 
   const language = useSelector((state : RootState) => state.japanese)
 
@@ -73,9 +83,9 @@ export default function Contact() {
  }   
                               <Grid container>
 
-<Grid item md={1}></Grid>
+<Grid item md={1} xs={1}></Grid>
 
-<Grid className={classes.formContainer} item md={12} xs={12}>
+<Grid className={classes.formContainer} item md={12} xs={10}>
                
                   
           {err ? <h2 className={classes.popup} style={{color:"#FF0000"}}> {language ? "エーラがありましたもう一度チェックしてください" : ' Invalid Parameters Make sure you fill form Correctly'  }</h2> : <p></p> }
@@ -94,7 +104,7 @@ export default function Contact() {
  <input name='email' type="text" className={classes.input} ref={emailRef} ></input>
                
           {language ? <p className={classes.jtext}>  メセージ  </p>:  <p> General Message</p> }    
- <textarea name='message' className={classes.area} rows={4} cols={23} ref={messageRef} ></textarea>
+      {length  ? <textarea name='message' className={classes.area} rows={4}  cols={10} ref={messageRef} ></textarea> : <textarea name='message' className={classes.area} rows={4}  cols={22} ref={messageRef} ></textarea> } 
 
   <button type='submit' className={classes.buttonTwo} > <span> Send </span> </button>  
         
@@ -114,10 +124,10 @@ export default function Contact() {
 
                                              </Grid>
                               
-                                             <Grid md={1} ></Grid>
+                                             <Grid md={1} xs={1}></Grid>
 
 
-                                             <Grid item md={1} xs={6} className={classes.aboutHeading}>
+                                             <Grid item md={1} xs={5} className={classes.aboutHeading}>
                           {language ? <h2 className={classes.jtext}>私について</h2> :  <h2>About Me </h2> }  
 <Image src={myImage} width={100} height={120} />
   

@@ -127,11 +127,11 @@ export default function Homepage() {
 
                   <Grid style={{marginTop: "7%"}} className={classes.projectWork} container spacing={2}>
                                   <Grid item md={12} xs={12}> {japaneseLanguage ? <h1  className={classes.jtext}>ストリーム </h1> :          <h1>Stream</h1>}</Grid>
-                      <Grid  item md={2} > </Grid>
+                      <Grid  item md={2} xs={1} > </Grid>
                      
   
 
-                     <Grid  item md={4} xs={12}>
+                     <Grid  item md={4} xs={10}>
 
 
            
@@ -172,6 +172,8 @@ export default function Homepage() {
                                            <Link href="https://stream-321403.el.r.appspot.com/"><Image src={imageBoxMob.stream} height={300} width={200} /></Link>
                      </Grid> : <p></p> }  
 
+
+
 </Grid>
                     
               
@@ -180,11 +182,11 @@ export default function Homepage() {
                   
                <Grid style={{marginTop: "7%"}} className={classes.projectWork} container spacing={2}>
                                   <Grid item md={12} xs={12}> {japaneseLanguage ? <h1 className={classes.jtext}>コッドマップ </h1> :          <h1>Code Map</h1>}</Grid>
-                      <Grid  item md={2} > </Grid>
+                      <Grid  item md={2} xs={1} > </Grid>
                      
   
 
-                     <Grid  item md={4} xs={12}>
+                     <Grid  item md={4} xs={10}>
 
 
            

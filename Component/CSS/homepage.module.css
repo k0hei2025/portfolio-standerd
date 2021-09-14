@@ -134,6 +134,17 @@
   margin-left: 4%;
  
 }
+
+.aboutTDescription {
+  text-align: left;
+  font-family: "Fira Sans";
+  margin-left: 4%;
+ 
+}
+
+
+
+
 .aboutsDescription {
   text-align: left;
   font-family: "Fira Sans";
@@ -297,6 +308,13 @@ font-family: 'Kaisei Tokumin';
   }
   .aboutDescription {
     text-align:left;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 3%;
+  }
+
+  .aboutTDescription {
+      text-align:center;
     font-size: 15px;
     font-weight: 700;
     margin-left: 3%;
