@@ -124,7 +124,7 @@ if (window.innerWidth >= 900){
    
             {languageChange ?  <a href="履歴書.pdf" download="履歴書.pdf"><p  style={{color: 'black'}} className={classNames(classes.linkColor , classes.jgetCol) } > 履歴書 </p></a>  :   
 
-      <a href="profile.pdf" download="resume.pdf"><p style={{color: 'black'}} className={classNames( classes.linkColor , classes.getCol )}> Resume</p></a> }
+      <a href="resume.pdf" download="resume.pdf"><p style={{color: 'black'}} className={classNames( classes.linkColor , classes.getCol )}> Resume</p></a> }
 </Grid>
 
 <Grid item md={1} xs={2} className={ classNames(buttonClass , classes.get , classes.getTouch)} >
