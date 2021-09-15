@@ -19,6 +19,11 @@
   text-align: center;
   font-family: "Fira Sans";
 }
+.size1H{
+    font-size: 30px;
+  text-align: center;
+  font-family: "Fira Sans";
+}
 .card {
   text-align: center;
   font-family: "Fira Sans";
@@ -40,13 +45,13 @@
 
 .cardHeading {
   text-align: center;
-  font-weight: bolder;
-  font-family: "Fira Sans";
+  font-weight: bold;
+  font-family: "Paytone One";
 }
 
 .jcardHeading{
     text-align: center;
-  font-weight: bolder;
+  font-weight: bold;
   font-family: 'Kaisei Tokumin';
 }
 
@@ -79,14 +84,14 @@
 
 .card3Heading {
   text-align: center;
-  font-weight: bolder;
-  font-family: "Fira Sans";
+  font-weight: bold;
+  font-family: "Paytone One";
   margin-top: 15px;
 }
 
 .jcard3Heading{
     text-align: center;
-  font-weight: bolder;
+  font-weight: bold;
   font-family: 'Kaisei Tokumin';
     margin-top: 15px;
 }
@@ -220,11 +225,21 @@ font-size: 50px;
 font-family: 'Kaisei Tokumin';
 
 }
+.jaSize{
+  font-size: 60px;
+  text-align: center;
+font-family: 'Kaisei Tokumin';
+}
 
 .Jsize1{
   font-size: 30px;
   text-align: center;
 font-family: 'Kaisei Tokumin';
+}
+.Jsize1H{
+    font-size: 30px;
+  text-align: center;
+  font-family: 'Kaisei Tokumin';
 }
 
 .align{
@@ -255,8 +270,29 @@ font-family: 'Kaisei Tokumin';
   
 }
 
+.sizeH{
+  font-size:60px;
+  text-align: center;
+}
+
 
 @media (max-width: 768px) {
+
+  .cardT{
+    margin-top:-200px
+  }
+  
+  .sizeH{
+    text-align: center;
+    font-size:40px
+  }
+  .jaSize{
+    font-family: 'Kaisei Tokumin';
+    font-size:40px;
+    text-align:center;
+  }
+
+ 
 
    .jSize {
     font-size: 20px;
@@ -268,6 +304,15 @@ font-family: 'Kaisei Tokumin';
   .Jsize1 {
     font-size: 18px;
     margin-left: 3%;
+  }
+
+  .size1H{
+    font-size:18px;
+    margin-top: 30px;
+  }
+  .Jsize1H{
+        font-size:18px;
+    margin-top: 30px;
   }
 
   .size {
@@ -282,6 +327,7 @@ font-family: 'Kaisei Tokumin';
   }
   .jcardHeading{
       font-size: 10px;
+     
   }
   .cardHeading {
     font-size: 10px;
@@ -291,20 +337,22 @@ font-family: 'Kaisei Tokumin';
     margin-top:35%;
   }
   .cardDescription {
-    font-size: 8px;
+    font-size: 10px;
   }
   .card3Description{
-    font-size: 8px;
+    margin-top: 24px;
+    font-size: 10px;
   }
   .jcard3Heading{
     font-size: 10px;
-    margin-top:35%;
+     margin-top: 35%;
   }
   .jcardDescription {
-    font-size: 8px;
+    font-size: 10px;
   }
   .jcard3Description{
-      font-size: 8px;
+         margin-top: 24px;
+      font-size: 10px;
   }
   .aboutDescription {
     text-align:left;
@@ -325,6 +373,10 @@ font-family: 'Kaisei Tokumin';
     font-size: 15px;
    
     margin-left: 3%;
+  }
+
+  .cardT{
+    margin-top:5px;
   }
 
   .aboutsDescription {
@@ -351,7 +403,7 @@ font-family: 'Kaisei Tokumin';
 
   }
   .pad {
-    padding-bottom : 200px;
+    padding-bottom : 50px;
   }
   .icons {
     text-align:center;

@@ -44,7 +44,7 @@ export default function Homepage() {
                                 
                                 <Grid item md={12} xs={12}>
                                  
-                                   {japaneseLanguage ?  <h1 className={classes.jSize}> 成功フロントエンド開発  </h1>:  <h1 className={classes.size}> Successful Front-end Development</h1>} 
+                                   {japaneseLanguage ?  <h1 className={classes.jaSize}> 成功フロントエンド開発  </h1>:  <h1 className={classes.sizeH}> Successful Front-end Development</h1>} 
                                 </Grid>
                                
                                <Grid md={2}>
@@ -53,7 +53,7 @@ export default function Homepage() {
 
                                 <Grid item md={8} xs={12}>
                                                  
-                                              {japaneseLanguage ? <h1 className={classes.Jsize1}> こんにちは。バイバブと申しますフロントエンドについて三年の経験がありますよろしく </h1> :  <h1 className={classes.size1}> Hi. I’m Vaibhav, a freelance Front-end Developer with 3 years of Front-end Development Experiences  </h1>  } 
+                                              {japaneseLanguage ? <h1  className={classes.Jsize1H}> こんにちは。バイバブと申しますフロントエンドについて三年の経験がありますよろしく </h1> :  <h1 className={classes.size1H}> Hi. I’m Vaibhav, a freelance Front-end Developer with 3 years of Front-end Development Experiences  </h1>  } 
                                               
 
                                 </Grid>
@@ -63,7 +63,7 @@ export default function Homepage() {
                                 </Grid>
 
 
-<Grid container spacing={2} style={ { marginTop: '4%'} }>
+<Grid container spacing={2} className={classes.cardT}>
 
 <Grid item md={2} ></Grid>
 
@@ -84,7 +84,7 @@ export default function Homepage() {
                             <Grid item md={2} xs={3} className={classes.card}>
                                            <Image src={Tools}  width={150} height={200} />
 
-                                        {japaneseLanguage? <p className={classes.jcardHeading}> 性能やらSEOなど便利テスト</p> :   <p className={classes.cardHeading}> Performance, SEO, & accessibility testing</p> }    
+                                        {japaneseLanguage? <p className={classes.jcardHeading}> 性能くて便利テスト</p> :   <p className={classes.cardHeading}> Performance & accessibility </p> }    
                           {japaneseLanguage ? <p className={classes.jcardDescription}>君のウェブサイトの効率は早いくて探す安い観客に色々方法で戻ります</p>  : <p className={classes.cardDescription}>Make your website fast, easy to find, and reach the widest audience possible.</p>}  
                                 </Grid>
 
